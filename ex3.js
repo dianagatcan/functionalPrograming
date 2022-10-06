@@ -21,7 +21,7 @@ const authorObj = {
 };
 
 const deepClone = (input) => {
-  if (typeof input !== "object") {
+  if (typeof input !== "object" || input === null) {
     return input;
   }
   const copy = Array.isArray(input) ? [] : {};
